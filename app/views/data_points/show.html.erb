@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @data_point.year %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @data_point.value %>
+</p>
+
+<p>
+  <strong>Continent:</strong>
+  <%= @data_point.continent_id %>
+</p>
+
+<%= link_to 'Edit', edit_data_point_path(@data_point) %> |
+<%= link_to 'Back', data_points_path %>

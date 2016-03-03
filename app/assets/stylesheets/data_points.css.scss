@@ -1,8 +1,14 @@
 // Place all the styles related to the DataPoints controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.message {
+  color: white;
+  text-align: center;
+  display: none; 
+}
 
 .continents {
+
   display: none;
   width: 1200px;
   text-align: center;

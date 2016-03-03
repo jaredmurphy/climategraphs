@@ -19,11 +19,14 @@
 //= require highcharts/highcharts-more
 //= require highcharts/highstock
 
-$( document ).ready(function() {
+$( document ).ready(function() { 
+    var $audio = document.getElementById("audio");
     console.log( "js loaded" );
+    setTimeout(function(){
+       $('.message').show().addClass('magictime spaceInLeft');
+   }, 37000);
     $('.earth').on("click", function() {
         $(this).addClass('magictime holeOut');
-        var $audio = document.getElementById("audio");
         $audio.pause();
        $('.earth').fadeOut(800);
         $('p').css("color: black");

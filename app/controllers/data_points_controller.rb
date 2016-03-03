@@ -115,7 +115,7 @@ class DataPointsController < ApplicationController
 	      f.title(text: "#{@title} Temperature Anomolies from the 20th Century Average")
 	      #f.xAxis(categories: @oceania_years)
 	      f.series(name: "Temperature Anomoly", yAxis: 0, data: @data, color: "#FF0000",threshold: 0,
-		negativeColor: '#00FFFF')
+		negativeColor: '#008c9e')
 
 	      f.yAxis [
 		{title: {text: "Degrees in Celcius", margin: 10} },

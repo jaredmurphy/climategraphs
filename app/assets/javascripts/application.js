@@ -41,20 +41,36 @@ $( document ).ready(function() {
 
           setTimeout(function() {
             $('.sub_sub_heading').show().addClass('magictime tinRightIn');
+            $('.PrimaryNav').css('visibility','visible').hide().fadeIn('slow').addClass('magictime tinRightIn');
           }, 3000)
-          setTimeout(function(){
+          
+          $('.world_selector').on('click', function() {
 
-
+            $('.heading').fadeOut();
+            $('.sub_heading').fadeOut();
+            $('.sub_sub_heading').fadeOut();
+            $('#container').fadeOut();
+            $('.state_select').fadeOut();
             $('.continent_buttons').fadeIn();
-            $('.state_select').fadeIn();
-          }, 4500)
+            $('#graph').fadeIn();
 
+          });
+          $('.usa_selector').on('click', function() {
+          
+            $('.heading').fadeOut();
+            $('.sub_heading').fadeOut();
+            $('.sub_sub_heading').fadeOut();
+            $('#graph').fadeOut(); 
+            $('.state_select').css('fill', '#008c9e')
+            $('.continent_buttons').fadeOut();
+            $('.state_select').fadeIn();
+           });
         }, 1000);
   }); // ends earth click function
   $state = $('.state')
   $('.state_select').on("click", function() { stateNumber = $(this).attr('id')
   console.log(stateNumber);
-  $('.state_select').css("fill"," blue");
+  $('.state_select').css("fill"," #008c9e");
   $(this).css("fill", "red");
   var $values = [];
       $.ajax({
@@ -123,7 +139,7 @@ $(function () {
             name: stateName,
             data: $values,
             color: 'red',
-            negativeColor: 'blue'
+            negativeColor: '#008c9e'
         }]
     });
 });

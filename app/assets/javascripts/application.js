@@ -23,7 +23,8 @@ $( document ).ready(function() {
     console.log( "js loaded" );
     $('.earth').on("click", function() {
         $(this).addClass('magictime holeOut');
-
+        var $audio = document.getElementById("audio");
+        $audio.pause();
        $('.earth').fadeOut(800);
         $('p').css("color: black");
 

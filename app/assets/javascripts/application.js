@@ -45,6 +45,7 @@ $( document ).ready(function() {
           setTimeout(function(){
 
 
+            $('.continent_buttons').fadeIn();
             $('.state_select').fadeIn();
           }, 4500)
 

@@ -1,31 +1,39 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Data Points</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Year</th>
-      <th>Value</th>
-      <th>Continent</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @data_points.each do |data_point| %>
-      <tr>
-        <td><%= data_point.year %></td>
-        <td><%= data_point.value %></td>
-        <td><%= data_point.continent_id %></td>
-        <td><%= link_to 'Show', data_point %></td>
-        <td><%= link_to 'Edit', edit_data_point_path(data_point) %></td>
-        <td><%= link_to 'Destroy', data_point, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<ul class="continent_buttons">
+  <% @continents.order(:name).each do |continent| %>
+    <% if continent.id < 7 %>
+      <li >
+        <% formatted_name = continent.name.gsub(" ", "_").downcase %>
+	<%= button_to continent.name, data_points_path(continent: formatted_name), remote: true, method: :get %>
+      </li>
     <% end %>
-  </tbody>
-</table>
+  <% end %>
 
-<br>
+  <% @continents.each do |continent| %>
+    <% if continent.id == 9 %>
+      <li >
+        <% formatted_name = continent.name.gsub(" ", "_").downcase %>
+	<%= button_to continent.name, data_points_path(continent: formatted_name), remote: true, method: :get %>
+      </li>
+    <% end %>
+  <% end %>
+<!--
 
+  <li>
+    <button class="global_hemispheres continent_button" value="global_hemispheres">
+      Global
+    </button>
+
+  </li>
+-->
+</ul>
+
+<div id="graph">
+</div>
+
+IGNORE BELOW THIS
 <%= link_to 'New Data point', new_data_point_path %>
+
+

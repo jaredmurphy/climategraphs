@@ -1,3 +1,40 @@
 // Place all the styles related to the DataPoints controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.continents {
+  display: none;
+  width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.continent_buttons  {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  overflow: auto
+}
+.continent_buttons li {
+  list-style: none;
+  display: inline;
+  float: left;
+}
+.continent_button {
+  list-style: none;
+  display: inline;
+  float: left;
+
+}
+
+#graph {
+	overflow:visible;
+}
+
+#global {
+ overflow:visible;
+}
+
+#highcharts-0 {
+overflow:visible;
+}

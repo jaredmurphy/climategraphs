@@ -188,6 +188,10 @@ $( document ).ready(function() {
                console.log($values)
                
 		$(function () {
+                    continent = continent.charAt(0).toUpperCase() + continent.slice(1);
+                    if (continent.split('')[0] === "N" || continent.split('')[0] === "S"){
+                       continent = continent.slice(0,5) + " " + continent.slice(5);
+                    }
 		    $('#container').show();
 		    $('#container').highcharts({
 			title: {

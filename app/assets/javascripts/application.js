@@ -23,8 +23,8 @@ $( document ).ready(function() {
     var $audio = document.getElementById("audio");
     console.log( "js loaded" );
     setTimeout(function(){
-       $('.message').show().addClass('magictime spaceInLeft');
-   }, 37000);
+       $('.message').css("visibility", "visible").addClass('magictime spaceInLeft');
+    }, 37000);
     $('.earth').on("click", function() {
         $(this).addClass('magictime holeOut');
         $audio.pause();
@@ -47,7 +47,7 @@ $( document ).ready(function() {
             $('.sub_sub_heading').show().addClass('magictime tinRightIn');
             $('.PrimaryNav').css('visibility','visible').hide().fadeIn('slow').addClass('magictime tinRightIn');
           }, 3000)
-          
+          $('.message').css("visibility", "hidden"); 
         }, 1000);
   }); // ends earth click function
   

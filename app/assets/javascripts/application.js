@@ -13,9 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require highcharts/highcharts
-//= require highcharts/highcharts-more
 //= require highcharts/highstock
+//= require highcharts/highcharts-more
 //= require_tree .
 
 $( document ).ready(function() { 

@@ -89,7 +89,7 @@ $( document ).ready(function() {
 	  var $values = [];
 	   $.ajax({
 		method: 'GET',
-		url: "http://www.ncdc.noaa.gov/cag/time-series/us/" + stateNumber + "/00/tavg/ytd/12/1895-2016.json?base_prd=true&firstbaseyear=1901&lastbaseyear=2000",
+		url: "https://www.ncdc.noaa.gov/cag/time-series/us/" + stateNumber + "/00/tavg/ytd/12/1895-2016.json?base_prd=true&firstbaseyear=1901&lastbaseyear=2000",
 		success: function(data) {
 			data = JSON.parse(data)
 			mo_data = data.data
@@ -167,7 +167,7 @@ $( document ).ready(function() {
       console.log(continent)
       $.ajax({
         method: 'GET',
-        url: "http://www.ncdc.noaa.gov/cag/time-series/global/" + continent + "/land/ytd/12/1880-2016.xml?trend=true&trend_base=10&firsttrendyear=1910&lasttrendyear=2015",
+        url: "https://www.ncdc.noaa.gov/cag/time-series/global/" + continent + "/land/ytd/12/1880-2016.xml?trend=true&trend_base=10&firsttrendyear=1910&lasttrendyear=2015",
         success: function(data) {
                var year;
                var value;
